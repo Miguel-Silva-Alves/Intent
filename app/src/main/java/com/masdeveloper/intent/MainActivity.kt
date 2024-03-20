@@ -24,10 +24,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         amb.entrarParametroBt.setOnClickListener{
-            Intent(this, ParametroActivity::class.java).also {
+
+            Intent("ABRA_PARAMETRO_ACTIVITY").also {
                 it.putExtra(PARAMETRO_EXTRA, amb.parametroTv.text.toString())
                 startActivityForResult(it, PARAMETRO_REQUEST_CODE)
             }
+
+//            Intent(this, ParametroActivity::class.java).also {
+//                it.putExtra(PARAMETRO_EXTRA, amb.parametroTv.text.toString())
+//                startActivityForResult(it, PARAMETRO_REQUEST_CODE)
+//            }
         }
     }
 
